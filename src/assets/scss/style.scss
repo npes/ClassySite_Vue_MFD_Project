@@ -10,15 +10,33 @@
 
 html, body {font-family: 'Open Sans', sans-serif;}
 
+/* CORE STYLES */
+
+.btn {
+	display: block;
+	cursor:pointer;
+	text-decoration: none;
+	text-transform: uppercase;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	border: 2px	solid #ffffff;
+	font-size: $buttonFontSize;
+	outline: none;
+	z-index: 1;
+}
+.btn:hover {
+	box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
 /*GRID SETUP WRAPPER*/
 .wrapper {
 	display: grid;
-	max-width: 1370px;
+	//width: 100rem;
 	//max-width: 71.73vw;
 	margin: 0 auto;
 	grid-template-columns: repeat(14, 1fr);
 	//grid-template-rows: 80vh 585px 270px 778px 670px 430px 430px 275px 250px;
-	//grid-template-rows: fit-content(40%);
+	//grid-template-rows: fit-content(120%);
+	//grid-template-rows: 100% 100% 180% 100% 100% 100% 100% 100%;
 
     /* give the grid areas names */
     grid-template-areas: 
@@ -44,7 +62,7 @@ html, body {font-family: 'Open Sans', sans-serif;}
 	display: block;
     width: 100%;
     height: 100%;
-	object-fit: scale-down;
+	object-fit: fill;
 	}  
 }
 
@@ -65,15 +83,13 @@ header {
 /* LOGO-TOP START */
 	.logo-top {
 		grid-area: a;
-		//margin: auto;
 		justify-self: start;
-		//height: 100%;
 		align-self: center;
 			img { 
 				display: block;
 				width: 100%;
 				height: 100%;
-				object-fit: scale-down;
+				object-fit: fill;
 			}
 		}
 	 .buttons-top {
@@ -120,44 +136,29 @@ header {
 		}
 	 }
 	.btn {
-		//display: block;
 		grid-area: d;
 		justify-self: end;
 		align-self: center;
-		padding: 0;
-		//margin: 315px 0 0 835px;
 		width: 30%;
 		height: 25%;
-		cursor:pointer;
-		text-decoration: none;
-		text-transform: uppercase;
 		color: #ffffff;
 		background-color: transparent;
-		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
-		border: 2px	solid #ffffff;
-		font-size: $buttonFontSize;
-		outline: none;
-	}
-	.btn:hover {
-		box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
-	}
+		border: 2px	solid #ffffff;	
+	}	
 }
 
 /* SECTION A START - "LOOKBOOK" */
 .sectionA {
-	border: 1px solid red;
 	margin: 5em 0;
 	grid-area: sA;
 	align-self: center;
 	display: grid;
 	grid-template-columns: 1fr 1.35fr 1fr;	
-	grid-template-rows: fit-content(100%);
-
 	.lookbook-img1{
 		//border: 1px solid orange;
 		//margin: auto;
-		//width: 100%;
-		//height: 100%;
+		width: 100%;
+		height: 100%;
 		background-color: #000;
 		align-self: center;
 		justify-self: end;
@@ -166,14 +167,13 @@ header {
 			display: block;
 			width: 100%;
 			height: 100%;
-			object-fit: scale-down;
+			object-fit: fill;
 		}
 	}
-
 	.lookbook-img2{
 		//margin: auto;
-		//width: 95%;
-		//height: 95%;
+		width: 100%;
+		height: 100%;
 		background-color: #000;
 		align-self: center;
 		justify-self: start;
@@ -182,19 +182,16 @@ header {
 			display: block;
 			width: 100%;
 			height: 100%;
-			object-fit: scale-down;
+			object-fit: fill;
 		}
 	}
-
 	.newsletter {
-		//border: 1px solid rgb(54, 38, 38);
 		width: 100%;
 		height: 105%;
 		background-color: $lightergrey;
 		-webkit-box-shadow: 0px 17px 39px 0px rgba(0,0,0,0.2);
 		-moz-box-shadow: 0px 17px 39px 0px rgba(0,0,0,0.2);
 		box-shadow: 0px 17px 39px 0px rgba(0,0,0,0.2);
-		//margin: 10px 10px;
 		align-self: center;
 		justify-self: center;
 		display: flex;
@@ -212,37 +209,30 @@ header {
 		align-items: center;
 
 		.icon-container{
-			width: 15%;
-			height: 17%;
-			
-			margin-top: $line-space-small;  
+			margin-top: 2%;
+			width: 20%;
 			.circle {
+				position: relative;
 				width: 100%;
 				height: 100%;
-				border-radius: 50%;
+				border-radius: 100%;
+				//overflow: hidden;
 				background-color: $lightblue;
-				display: flex;
-				align-items: center;
-				justify-content: center;			
+				z-index: 1;
 			}
-		}
-		.img-container {
-			width: 80%;
-			height: 60%;
-			img {
+			::after {
+				content: '';
 				display: block;
-				width: 100%;
-				height: 100%;
-				object-fit: scale-down;
-			}
+				padding-bottom: 100%;
+			  } 
 		}
-		
 
 		h2 {
 			text-transform: uppercase;
 			font-size: $h2Size;
 			font-weight: bold;
-			margin-top: $line-space-small;
+			margin-top: 4%;
+			text-align: center;
 		}
 
 		h3 {
@@ -252,7 +242,7 @@ header {
 			text-align: center;
 			font-weight: 100;
 			color: #9d9d9d;
-			margin-top: $line-space-small;
+			margin-top: 4%;
 		}
 
 		input {
@@ -264,8 +254,8 @@ header {
 			font-weight: 900;
 			font-size: $h3Size;
 			width: 90%;
-			margin-top: $line-space-small;
-			line-height: $line-height;
+			margin-top: 5%;
+			line-height: 250%;
 			outline: none;
 			cursor: pointer;		
 		}
@@ -279,27 +269,13 @@ header {
 		input:-moz-placeholder { color: #000; opacity: 1; }	
 
 		.btn {
-		//display: block;
-		padding: 0;
-		margin-top: $line-space-small;
+		margin-top: 9%;
 		width: 90%;
 		height: 20%;
-		cursor:pointer;
-		text-decoration: none;
-		text-transform: uppercase;
 		color: #000;
 		background-color: transparent;
-		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 		border: 1px	solid #000;
-		font-size: $buttonFontSize;
 		font-weight: 900;
-		outline: none;
-		}
-		.btn:hover {
-			//color: #fff;
-			background-color:$lightgrey;	
-			box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
-			
 		}
 	}
 
@@ -314,17 +290,22 @@ header {
 .sectionB {
 	grid-area: sB;
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: repeat(3, 1fr);
+	// grid-template-areas: 
+	// 	"a a a a a"
+	// 	"b b b b b"
+	// 	"c c c c c";
 	grid-template-areas: 
-		"a a a a a"
-		"b b b b b"
-		"c c c c c";
+		"a"
+		"b"
+		"c";
 	.top-brands	{
 		grid-area: a;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin: calc(1.2vw + 1vh + 0.5vmin) 0;
 	
 		p {
 			text-transform: uppercase;
@@ -365,10 +346,9 @@ header {
 /* SECTION C START - "MUST HAVE FOR HER" */
 .sectionC {
 	grid-area: sC;
-
 	margin: 5em 0;
 	display: grid;
-	grid-template-columns: 1.15fr 0.85fr;
+	grid-template-columns: 1.145fr 0.855fr;
 	grid-template-rows: 1fr 1fr;
 	grid-template-areas: 
 		"l1 r1"
@@ -378,7 +358,7 @@ header {
 		display: block;
 		width: 100%;
 		height: 100%;
-		object-fit: scale-down;
+		object-fit: fill;
 	}
 	.left-image {
 		grid-area: l1;
@@ -386,8 +366,8 @@ header {
 		justify-self: end;
 		//background-image: url(src="/src/images/Homepage/MustHaveForHerFull.jpg");
 		//background-size: cover;
-		// width: 100%;
-		// height: 100%;
+		width: 100%;
+		height: 100%;
 	}
 	.right-image-top {
 		grid-area: r1;
@@ -413,14 +393,15 @@ header {
 		display: block;
 		width: 100%;
 		height: 100%;
-		object-fit: scale-down;
+		object-fit: fill;
 		} 
 }
 .sectionE {
 	grid-area: sE;	
-	display: grid;
-	height: 100%;
 	margin: 5em 0;
+	display: grid;
+	height: 2em;
+	
 
 }
 /* SECTION F START - "PRESENTATIONS SLIDER" */
@@ -439,6 +420,7 @@ header {
 footer {
 	grid-area: ft;
 	display: grid;
+	margin-top: 5%;
 	grid-template-columns: 0.833fr 0.833fr 0.833fr 1.25fr 1.25fr;
 	align-items: center;
 	justify-items: center;
@@ -489,13 +471,16 @@ footer {
 	.logo-ft {
 		color: $darkgrey;
 		font-size: 0.8em;
-		input {
-			outline: none;
-		}
+	}
+	img { 
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: scale-down;
 	}
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
 	.wrapper {
 		display: grid;
 		width: auto;

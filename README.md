@@ -2,6 +2,25 @@
 
 > 2nd semester project for modern frontend development
 
+TODO:
+
+DONE - Nyt GIT repo - Husk git ignore node packages
+D0NE - Flyt projekt til VUE (SASS compiler)
+Lav plan over VUE components der skal bruges - Header - Footer
+Slick slider
+Burger menu
+Vue routing
+Bem
+Mixins
+Media query screen sizes? 1000px;
+Test web deploy.
+DONE - Robots.txt
+Contact form og validering
+
+CSS:
+
+HTML:
+
 ## Build Setup
 
 ``` bash

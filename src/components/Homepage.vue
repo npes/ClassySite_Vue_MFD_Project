@@ -23,26 +23,24 @@
 
         <!-- HEADER START-->
         <header id="header">
-        <div class="logo-top">
-            <a href="#header"><img src="../assets/images/Header/CLASSY.png" alt="company logo"></a>
-            <!-- <img src="../images/Header/CLASSY.png" alt="company logo"> -->
-            <!-- <input class="logo" width="auto" height="auto" alt="Login" type="image" src="../images/Header/CLASSY.png"> -->
-        </div>
-        <div class="buttons-top">
-            <div class="login-btn">
-                <a href="#">login</a>
+            <div class="logo-top">
+                <a href="#header"><img src="../assets/images/Header/CLASSY.png" alt="company logo"></a>
             </div>
-            <div class="shopbag-btn">
-                <a href="#">3 items</a>
+            <div class="buttons-top">
+                <div class="login-btn">
+                    <a href="#">login</a>
+                </div>
+                <div class="shopbag-btn">
+                    <a href="#">3 items</a>
+                </div>
+                <div class="search-btn">
+                    <a href="#"></a>
+                </div>
+                <div class="menu-btn">
+                    <a href="#"></a>
+                </div>
             </div>
-            <div class="search-btn">
-                <a href="#"></a>
-            </div>
-            <div class="menu-btn">
-                <a href="#"></a>
-            </div>
-        </div>
-        <button class="btn">learn more about great deals</button>
+            <button class="btn">learn more about great deals</button>
         </header>
         <!-- SECTION A START - "LOOKBOOK" -->
         <section class="sectionA">
@@ -52,12 +50,12 @@
             <div class="newsletter">
                 <div class="newsletter-inner">
                     <div class="icon-container">
-                        <div class="circle">
-                            <div class="img-container">
-                                <img src="../assets/images/Homepage/MailIcon.png" alt="Mail icon">
-                            </div>
+                         <div class="circle">
+                             <!-- <img src="../assets/images/Homepage/MailIcon.png" alt="Mail icon"> -->
                         </div>
+                        
                     </div>
+                   
                     <h2>get our newsletter</h2>
                     <h3>join our maillist to receive special discounts</h3>
                     <input type="email" placeholder="enter your email">
@@ -156,7 +154,7 @@
                 <img src="../assets/images/Homepage/Creditcards.png" alt="accepted credit cards">
             </div>
             <div class="logo-ft">
-                <input class="logo" width="auto" height="auto" alt="Login" type="image" src="../assets/images/Header/CLASSY.png" href="#header">
+                <a href="#header"><img src="../assets/images/Header/CLASSY.png" alt="company logo"></a>
                 <p>Ecommerse PSD Theme</p>
             </div>
         </footer>

@@ -27,6 +27,8 @@ html, body {font-family: 'Open Sans', sans-serif;}
 	box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
 }
 
+
+
 /*GRID SETUP WRAPPER*/
 .wrapper {
 	display: grid;
@@ -219,6 +221,21 @@ header {
 				//overflow: hidden;
 				background-color: $lightblue;
 				z-index: 1;
+				.icon-box {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					.icon{
+						color: #fff;
+						object-fit: scale-down;
+						font-size: 80px;
+						width: 50%;
+						height: 50%;
+					}
+				}
 			}
 			::after {
 				content: '';

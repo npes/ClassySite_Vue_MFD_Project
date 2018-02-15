@@ -40,6 +40,7 @@
                     <a href="#"></a>
                 </div>
             </div>
+            
             <button class="btn">learn more about great deals</button>
         </header>
         <!-- SECTION A START - "LOOKBOOK" -->
@@ -51,6 +52,10 @@
                 <div class="newsletter-inner">
                     <div class="icon-container">
                          <div class="circle">
+                             <div class="icon-box">
+                                 <icon class="icon" name="envelope" scale="1"></icon>
+                             </div>
+                             
                              <!-- <img src="../assets/images/Homepage/MailIcon.png" alt="Mail icon"> -->
                         </div>
                         

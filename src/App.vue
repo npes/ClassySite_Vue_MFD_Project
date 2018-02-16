@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <icon name="camera"></icon>
+    
     <router-view/>
   </div>
 </template>

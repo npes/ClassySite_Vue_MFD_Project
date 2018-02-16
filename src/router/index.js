@@ -10,7 +10,8 @@ export default new Router({
     {
       path: '/',
       name: 'Homepage',
-      component: Homepage
+      component: Homepage,
+      meta: {title: 'Classy Clothing'}
     }
   ]
 })

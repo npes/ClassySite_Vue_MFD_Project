@@ -1,5 +1,8 @@
 @import "reset";
+@import "mediaQueries";
 @import "variables";
+
+
 
 * {
 	box-sizing: border-box;
@@ -8,7 +11,9 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
-html, body {font-family: 'Open Sans', sans-serif;}
+html, body {
+	font-family: 'Open Sans', sans-serif;
+}
 
 /* CORE STYLES */
 
@@ -19,7 +24,8 @@ html, body {font-family: 'Open Sans', sans-serif;}
 	text-transform: uppercase;
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 	border: 2px	solid #ffffff;
-	font-size: $buttonFontSize;
+	//font-size: $buttonFontSize;
+	font-size: $f-n;
 	outline: none;
 	z-index: 1;
 }
@@ -37,8 +43,6 @@ html, body {font-family: 'Open Sans', sans-serif;}
 	margin: 0 auto;
 	grid-template-columns: repeat(14, 1fr);
 	//grid-template-rows: 80vh 585px 270px 778px 670px 430px 430px 275px 250px;
-	//grid-template-rows: fit-content(120%);
-	//grid-template-rows: 100% 100% 180% 100% 100% 100% 100% 100%;
 
     /* give the grid areas names */
     grid-template-areas: 
@@ -98,43 +102,35 @@ header {
 		grid-area: b;
 		justify-self: end;
 		align-self: center;
-		a {         
-						color: #ffffff;
-						padding: 0 0 0 0px;
-						font-size: 0.9em;
-						text-decoration: none;
-						text-transform: uppercase;
-					}
+
 		div {
 			display: inline-block;
 		}
-		.login-btn{
-			background: url('../src/assets/images/Header/LoginSymbol.png') no-repeat center left;
-			margin: auto 0 auto auto;	
-			a {
-				padding: 0 0 0 25px;
-			};
+
+		a{
+			color: #ffffff;
+			text-decoration: none;
+			text-transform: uppercase;
+			//font-size: $icon-size;
+			font-size: $f-n;
+			margin-right: $f-xl;
+			vertical-align: bottom;
 		}
-		.shopbag-btn{
-			background: url('../src/assets/images/Header/ShoppingBagSymbol.png') no-repeat center left;
-			margin: auto 0 auto 16px;
-			a {
-				padding: 0 0 0 25px;
-			};	
+		a:hover {
+			color: $lightgrey;
 		}
-		.search-btn{
-			background: url('../src/assets/images/Header/MagGlassSymbol.png') no-repeat center left;
-			margin: auto 0 auto 16px;
-			a {
-				padding: 0 0 0 17px;
-			};
+
+		.menu-btn-last{
+			margin-right: 0;
 		}
-		.menu-btn{
-			background: url('../src/assets/images/Header/BurgerMenuIcon.png') no-repeat center left;
-			margin: auto 0 auto 16px;
-			a {
-				padding: 0 0 0 17px;
-			};
+		
+		.icon{
+			vertical-align: middle;
+			// width: $icon-size;
+			// height: $icon-size;
+			width: $f-n;
+			height: $f-n;
+			padding-bottom: 0px;
 		}
 	 }
 	.btn {
@@ -231,7 +227,7 @@ header {
 					.icon{
 						color: #fff;
 						object-fit: scale-down;
-						font-size: 80px;
+						//font-size: 80px;
 						width: 50%;
 						height: 50%;
 					}
@@ -246,7 +242,7 @@ header {
 
 		h2 {
 			text-transform: uppercase;
-			font-size: $h2Size;
+			font-size: 2.5rem;
 			font-weight: bold;
 			margin-top: 4%;
 			text-align: center;
@@ -254,7 +250,7 @@ header {
 
 		h3 {
 			text-transform: uppercase;
-			font-size: $h3Size;
+			font-size: $f-l;
 			width: 70%;
 			text-align: center;
 			font-weight: 100;
@@ -269,7 +265,7 @@ header {
 			text-align: center;
 			border-bottom: 2px solid #000;
 			font-weight: 900;
-			font-size: $h3Size;
+			font-size: $f-l;
 			width: 90%;
 			margin-top: 5%;
 			line-height: 250%;
@@ -305,6 +301,7 @@ header {
 	background-color: $lightgrey;
 }
 .sectionB {
+	//margin: 5em 0;
 	grid-area: sB;
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
@@ -400,6 +397,15 @@ header {
 /* SECTION D START - "PRODUCTS SLIDER" */
 .sectionD {
 	grid-area: sD;
+	align-self: center;
+	justify-self: center;
+	.slick-container {
+		width: 500px;
+		height: 300px;
+		a {
+			float: left;
+		}
+	}
 }
 
 /* rowstart / columnstart / rowend / columnend*/
@@ -412,12 +418,67 @@ header {
 		height: 100%;
 		object-fit: fill;
 		} 
+	z-index: -1;
 }
 .sectionE {
 	grid-area: sE;	
-	margin: 5em 0;
+	//margin: 5em 0;
+	
 	display: grid;
-	height: 2em;
+	//padding: 40px;
+	grid-template-columns: 2fr 1fr 2fr;
+	align-self: center;
+	//justify-self: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 4rem;
+	.text-left{
+		text-align: right;
+		margin: auto 0;
+		padding: 0 2rem;
+	}
+	.text-right{
+		text-align: left;
+		margin: auto 0;
+		padding: 0 2rem;
+	}
+	.middle{
+		.icon-container{
+			width: 100%;
+			//z-index: -1;
+			.circle {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				border-radius: 100%;
+				background-color: rgba(51, 208, 222, 0.7);
+				.icon-box {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					align-content: center;
+					justify-content: center;
+					
+					img{
+						color: #fff;
+						object-fit: fill;
+						margin: 15% 0 0 10%;
+						width: 70%;
+						height: 70%;
+					}
+				}
+				
+			}
+			::after {
+				content: '';
+				display: block;
+				padding-bottom: 100%;
+			  } 
+			  
+		}
+	}
+	
 	
 
 }
@@ -433,11 +494,12 @@ header {
 .footer-BG {
 	grid-area: 9 / 1 / 9 / 15;
 	background-color: $dark;
+	margin-top: 5rem;
 }
 footer {
 	grid-area: ft;
 	display: grid;
-	margin-top: 5%;
+	margin: 7rem 0 2rem 0;
 	grid-template-columns: 0.833fr 0.833fr 0.833fr 1.25fr 1.25fr;
 	align-items: center;
 	justify-items: center;
@@ -452,6 +514,7 @@ footer {
 			text-decoration: none;
 			outline: none;
 			line-height: 2em;
+			font-size: $f-n;
 		}
 		a:link {
 			color: #fff;
@@ -498,23 +561,28 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
+	html {
+		font-size: 100%;
+	}
 	.wrapper {
 		display: grid;
-		width: auto;
-		margin: auto;
+		//width: auto;
+		//margin: auto;
 		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: auto;
+		//grid-template-rows: auto;
 		/* give the grid areas names */
 		grid-template-areas: 
-			". . lt lt . ."
-			". nv nv nv nv ."
-			"sA sA sA sA sA sA"
-			"sB sB sB sB sB sB"
-			"sC sC sC sC sC sC"
-			"sD sD sD sD sD sD"
-			"sE sE sE sE sE sE"
-			"sF sF sF sF sF sF"
-			"sG sG sG sG sG sG"
-			"ft ft ft ft ft ft";
+			". hd hd hd hd ."
+			". sA sA sA sA ."
+			". sB sB sB sB ."
+			". sC sC sC sC ."
+			". sD sD sD sD ."
+			". sE sE sE sE ."
+			". sF sF sF sF ."
+			". sG sG sG sG ."
+			". ft ft ft ft .";
 	}	
+	.sectionA {
+		grid-template-columns: 1fr;	
+	}
 }

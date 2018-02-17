@@ -11,17 +11,17 @@
                 <a href="#header"><img src="../assets/images/Header/CLASSY.png" alt="company logo"></a>
             </div>
             <div class="buttons-top">
-                <div class="login-btn">
-                    <a href="#">login</a>
+                <div>
+                    <a href="#"><icon class="icon" name="user-o"></icon> login</a>
                 </div>
-                <div class="shopbag-btn">
-                    <a href="#">3 items</a>
+                <div>
+                    <a href="#"><icon class="icon" name="shopping-bag"></icon> 3 items</a>
                 </div>
-                <div class="search-btn">
-                    <a href="#"></a>
+                <div>
+                    <a href="#"><icon class="icon" name="search"></icon></a>
                 </div>
-                <div class="menu-btn">
-                    <a href="#"></a>
+                <div class="menu-btn-last">
+                    <a href="#"><icon class="icon" name="bars"></icon></a>
                 </div>
             </div>
             
@@ -37,7 +37,7 @@
                     <div class="icon-container">
                          <div class="circle">
                              <div class="icon-box">
-                                 <icon class="icon" name="envelope" scale="1"></icon>
+                                 <icon class="icon" name="envelope-o" scale="1"></icon>
                              </div>
                              
                              <!-- <img src="../assets/images/Homepage/MailIcon.png" alt="Mail icon"> -->
@@ -94,11 +94,39 @@
         </section>
         <!-- SECTION D START - "PRODUCTS SLIDER" -->
         <section class="sectionD">
-
+            
+            <div class="slick-container">
+                <section class='gallery' id="gallery">
+                    <div v-for="img in images" v-bind:key="img">
+                        <img :src="img">
+                    </div>
+                </section>
+            </div>
         </section>
         <!-- SECTION E START - "OFFERS" -->
         <div class="sectionE-bgImage">
             <img src="../assets/images/Homepage/25OffBG.jpg" alt="">
+        </div>
+        <div class="sectionE">
+            <div class="text-left">
+                <p>all summer</p>
+            </div>
+            <div class="middle">
+                <div class="icon-container">
+                         <div class="circle">
+                             <div class="icon-box">
+                                 <img src="../assets/images/Homepage/Get25off.png" alt="get 25% off">
+                                 <!-- <icon class="icon" name="envelope-o" scale="1"></icon> -->
+                             </div>
+                             
+                             <!-- <img src="../assets/images/Homepage/MailIcon.png" alt="Mail icon"> -->
+                        </div>
+                        
+                    </div>
+            </div>
+            <div class="text-right">
+                <p>collection</p>
+            </div>
         </div>
         
         <section class="sectionE">
@@ -151,7 +179,8 @@
 </template>
 
 <script>
+
 export default {
-  
+      
 }
 </script>

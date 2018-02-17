@@ -1,0 +1,35 @@
+@media screen and (max-width: 1500px) {
+	html {
+		font-size: 80%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	html {
+		font-size: 68%;
+	}
+}
+
+
+
+// .wrapper {
+// 	display: grid;
+// 	//width: 100rem;
+// 	//max-width: 1800px;
+// 	margin: 0 auto;
+// 	grid-template-columns: repeat(14, 1fr);
+// 	//grid-template-rows: 80vh 585px 270px 778px 670px 430px 430px 275px 250px;
+
+//     /* give the grid areas names */
+//     grid-template-areas: 
+// 		". hd hd hd hd hd hd hd hd hd hd hd hd ."
+// 		". sA sA sA sA sA sA sA sA sA sA sA sA ."
+// 		". sB sB sB sB sB sB sB sB sB sB sB sB ."
+// 		". sC sC sC sC sC sC sC sC sC sC sC sC ."
+// 		". sD sD sD sD sD sD sD sD sD sD sD sD ."
+// 		". sE sE sE sE sE sE sE sE sE sE sE sE ."
+// 		". sF sF sF sF sF sF sF sF sF sF sF sF ."
+// 		". sG sG sG sG sG sG sG sG sG sG sG sG ."
+// 		". ft ft ft ft ft ft ft ft ft ft ft ft .";
+// 		grid-gap: 0;
+// }

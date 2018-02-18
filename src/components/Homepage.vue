@@ -1,13 +1,13 @@
 <template>
     <div class="homepage">
         <!-- HERO IMAGE BACKGROUND -->
-        <div class="hero-image">
+        <div class="hero-home">
             <img src="../assets/images/Header/HEADER.jpg" alt="">
         </div>
-        <button class="btn btn-hero">learn more about great deals</button>
+        <button class="btn btn-hero-home">learn more about great deals</button>
 
 <!-- SECTION A START - "LOOKBOOK" -->
-        <section class="sectionA">
+        <section class="homeA">
             <div class="lookbook-img1">
                 <img src="../assets/images/Homepage/MensLookbookImage.jpg" alt="Lookbook picture 1">
             </div>
@@ -34,9 +34,9 @@
                     <img src="../assets/images/Homepage/WomensLookBookImage.jpg" alt="Lookbook picture 2">
                 </div>
         </section>
-        <!-- SECTION B START - "TOP BRANDS" -->
-        <div class="sectionB-BG"></div>
-        <section class="sectionB">
+<!-- SECTION B START - "TOP BRANDS" -->
+        <div class="homeB-BG"></div>
+        <section class="homeB">
             <div class="top-brands">
                 <svg height="22" width="112">
                 <line x1="6" y1="11" x2="106" y2="11" style="stroke:#000;stroke-width:2" />
@@ -59,8 +59,8 @@
             </div>
             
         </section>
-        <!-- SECTION C START - "MUST HAVE FOR HER" -->
-        <section class="sectionC">
+<!-- SECTION C START - "MUST HAVE FOR HER" -->
+        <section class="homeC">
             <div class="left-image">
                 <img src="../assets/images/Homepage/MustHaveForHerFull.jpg" alt="">
             </div>
@@ -71,8 +71,8 @@
                 <img src="../assets/images/Homepage/NewSummerStyleFull.jpg" alt="">
             </div>
         </section>
-        <!-- SECTION D START - "PRODUCTS SLIDER" -->
-        <section class="sectionD">
+<!-- SECTION D START - "PRODUCTS SLIDER" -->
+        <section class="homeD">
             
             <div class="slick-container">
                 <section class='gallery' id="gallery">
@@ -82,11 +82,11 @@
                 </section>
             </div>
         </section>
-        <!-- SECTION E START - "OFFERS" -->
-        <div class="sectionE-bgImage">
+<!-- SECTION E START - "OFFERS" -->
+        <div class="homeE-bgImage">
             <img src="../assets/images/Homepage/25OffBG.jpg" alt="">
         </div>
-        <div class="sectionE">
+        <section class="homeE">
             <div class="text-left">
                 <p>all summer</p>
             </div>
@@ -106,17 +106,13 @@
             <div class="text-right">
                 <p>collection</p>
             </div>
-        </div>
-        
-        <section class="sectionE">
-            
         </section>
-        <!-- SECTION F START - "PRESENTATIONS SLIDER" -->
-        <section class="sectionF">
+<!-- SECTION F START - "PRESENTATIONS SLIDER" -->
+        <section class="homeF">
 
         </section>
-        <!-- SECTION G START - "SOCIAL MEDIA" -->
-        <section class="sectionG">
+<!-- SECTION G START - "SOCIAL MEDIA" -->
+        <section class="homeG">
 
         </section>
     </div>

@@ -1,0 +1,74 @@
+[
+{
+    "id": 1,
+    "description": "Crochet Back Playsuit",
+    "image-url": "",
+    "price": "47.10"
+},
+{
+    "id": 2,
+    "description": "Aztec Printed Jumpsuit",
+    "image-url": "",
+    "price": "54.20"
+},
+{
+    "id": 3,
+    "description": "Utility Detail Playsuit",
+    "image-url": "",
+    "price": "31.45"
+},
+{
+    "id": 4,
+    "description": "Denim Jacket",
+    "image-url": "",
+    "price": "77.87"
+},
+{
+    "id": 5,
+    "description": "Super Duper dress",
+    "image-url": "",
+    "price": "99.35"
+},
+{
+    "id": 6,
+    "description": "Crochet Jacket",
+    "image-url": "",
+    "price": "16.56"
+},
+{
+    "id": 7,
+    "description": "Gigantic Playsuit",
+    "image-url": "",
+    "price": "88.88"
+},
+{
+    "id": 8,
+    "description": "Famous Dress",
+    "image-url": "",
+    "price": "55.87"
+},
+{
+    "id": 9,
+    "description": "Green Collar",
+    "image-url": "",
+    "price": "34.88"
+},
+{
+    "id": 10,
+    "description": "Red Dress",
+    "image-url": "",
+    "price": "22.22"
+},
+{
+    "id": 11,
+    "description": "Kool Jeans",
+    "image-url": "",
+    "price": "45.45"
+},
+{
+    "id": 12,
+    "description": "Wide Jeans",
+    "image-url": "",
+    "price": "75.50"
+}
+]

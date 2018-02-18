@@ -5,29 +5,8 @@
             <img src="../assets/images/Header/HEADER.jpg" alt="">
         </div>
         <button class="btn btn-hero">learn more about great deals</button>
-        <!-- HEADER START-->
-        <!-- <header id="header">
-            <div class="logo-top">
-                <a href="#header"><img src="../assets/images/Header/CLASSY.png" alt="company logo"></a>
-            </div>
-            <div class="buttons-top">
-                <div>
-                    <a href="#"><icon class="icon" name="user-o"></icon> login</a>
-                </div>
-                <div>
-                    <a href="#"><icon class="icon" name="shopping-bag"></icon> 3 items</a>
-                </div>
-                <div>
-                    <a href="#"><icon class="icon" name="search"></icon></a>
-                </div>
-                <div class="menu-btn-last">
-                    <a href="#"><icon class="icon" name="bars"></icon></a>
-                </div>
-            </div>
-            
-            <button class="btn">learn more about great deals</button>
-        </header> -->
-        <!-- SECTION A START - "LOOKBOOK" -->
+
+<!-- SECTION A START - "LOOKBOOK" -->
         <section class="sectionA">
             <div class="lookbook-img1">
                 <img src="../assets/images/Homepage/MensLookbookImage.jpg" alt="Lookbook picture 1">

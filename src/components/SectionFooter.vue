@@ -1,5 +1,4 @@
 <template>
-    
         <footer id="footer">
             <div class="ft-column">
                 <h3><a href="#footer">questions</a></h3>

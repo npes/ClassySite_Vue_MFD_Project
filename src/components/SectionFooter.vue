@@ -1,34 +1,34 @@
 <template>
-        <footer id="footer">
+        <footer id="bottom">
             <div class="ft-column">
-                <h3><a href="#footer">questions</a></h3>
+                <h3><a href="#bootom">questions</a></h3>
                 <ul>
-                    <li><a href="#footer">Help</a></li>
-                    <li><a href="#footer">Track Order</a></li>
-                    <li><a href="#footer">Returns</a></li>
+                    <li><a href="#bottom">Help</a></li>
+                    <li><a href="#bottom">Track Order</a></li>
+                    <li><a href="#bottom">Returns</a></li>
                 </ul>
             </div>
             <div class="ft-column">
-                <h3><a href="#footer">where to buy</a></h3>
+                <h3><a href="#bottom">where to buy</a></h3>
                 <ul>
-                    <li><a href="#footerfooter">Store Locator</a></li>
-                    <li><a href="#footerfooter">Wishlist</a></li>
-                    <li><a href="#footer">Giftcards</a></li>
+                    <li><a href="#bottom">Store Locator</a></li>
+                    <li><a href="#bottom">Wishlist</a></li>
+                    <li><a href="#bottom">Giftcards</a></li>
                 </ul>
             </div>
             <div class="ft-column">
-                <h3><a href="#footer">about us</a></h3>
+                <h3><a href="#bottom">about us</a></h3>
                 <ul>
-                    <li><a href="#footer">Our Story</a></li>
-                    <li><a href="#footer">Careers</a></li>
-                    <li><a href="#footer">Affiliates</a></li>
+                    <li><a href="#bottom">Our Story</a></li>
+                    <li><a href="#bottom">Careers</a></li>
+                    <li><a href="#bottom">Affiliates</a></li>
                 </ul>
             </div>
             <div class="creditcards">
                 <img src="../assets/images/Homepage/Creditcards.png" alt="accepted credit cards">
             </div>
             <div class="logo-ft">
-                <a href="#header"><img src="../assets/images/Header/CLASSY.png" alt="company logo"></a>
+                <a href="#top"><img src="../assets/images/Header/CLASSY.png" alt="company logo"></a>
                 <p>Ecommerse PSD Theme</p>
             </div>
         </footer>
@@ -36,7 +36,7 @@
 
 <script>
 export default {
-    name: 'footer'
+    name: 'SectionFooter'
 }
 </script>
 

@@ -21,7 +21,7 @@ export default new Router({
       component: Collection
     },
     {
-      path: '/product',
+      path: '/product/:id',
       name: 'Product',
       component: Product
     }

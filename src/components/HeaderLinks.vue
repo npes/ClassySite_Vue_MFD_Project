@@ -1,5 +1,5 @@
 <template>
-    <nav id="header">
+    <nav id="top">
         <div class="nav-bg"></div>
         <div class="logo-top">
             <a href="#header"><img src="../assets/images/Header/CLASSY.png" alt="company logo"></a>
@@ -20,10 +20,11 @@
         </div> 
         <div id="side-menu" class="side-nav">
             <a href="#" class="btn-close" v-on:click="closeSide">&times;</a>
+            <!-- native because its a vue component -->
             <router-link to="/" v-on:click.native="closeSide" >Home</router-link>
-            <router-link to="collection" v-on:click.native="closeSide">Collection</router-link>
-            <router-link to="product" v-on:click.native="closeSide">Product</router-link>
-            <router-link to="contact" v-on:click.native="closeSide">Contact</router-link>
+            <router-link to="/collection" v-on:click.native="closeSide">Collection</router-link>
+            <!-- <router-link to="product" v-on:click.native="closeSide">Product</router-link> -->
+            <router-link to="/contact" v-on:click.native="closeSide">Contact</router-link>
         </div>       
     </nav>
 </template>

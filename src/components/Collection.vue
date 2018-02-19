@@ -27,16 +27,16 @@
 
     <section class="cards-collection">
 
-      <div class="card" v-for="product in products" :key="product.id">
-        <a href="#">
+      <div class="card" v-for="product in products.slice(0, 12)" :key="product.id">
+        <router-link :to="/product/ + product.id">
           <!-- <img src="../assets/images/Collection/dress1.jpg" class="" alt="card-image"> -->
           <img :src="product.image" alt="product image" class="card-image">
-        </a>
+        </router-link>
         <p class="card-description">{{product.description}}</p>
         <p class="card-price">{{product.price}}</p>
         <div class="btn btn-card">
         <icon class="icon" name="shopping-bag"></icon>  
-        <p href="">add to bag</p>
+        <p href="#">add to bag</p>
         </div>
       </div>
         
@@ -56,7 +56,6 @@ export default {
   },
   created: function() {
     this.getProducts()
-    //console.log(products)
   },
   methods: {
     getProducts: function() {

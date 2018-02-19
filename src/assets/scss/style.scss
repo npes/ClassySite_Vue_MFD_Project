@@ -41,3 +41,26 @@ html, body {
 .btn:hover {
 	box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
 }
+
+a:link {
+    color: $darkgrey;
+}
+
+/* visited link */
+a:visited {
+    color: $darkgrey;
+}
+
+/* mouse over link */
+a:hover {
+    color: $dark;
+}
+
+/* selected link */
+a:active {
+    color: $darkgrey;
+}
+
+a {
+	text-decoration: none;
+}

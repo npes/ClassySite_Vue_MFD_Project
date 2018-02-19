@@ -74,13 +74,13 @@
 <!-- SECTION D START - "PRODUCTS SLIDER" -->
         <section class="homeD">
             
-            <div class="slick-container">
+            <!-- <div class="slick-container">
                 <section class='gallery' id="gallery">
                     <div v-for="img in images" v-bind:key="img">
                         <img :src="img">
                     </div>
                 </section>
-            </div>
+            </div> -->
         </section>
 <!-- SECTION E START - "OFFERS" -->
         <div class="homeE-bgImage">

@@ -2,73 +2,73 @@
 {
     "id": 1,
     "description": "Crochet Back Playsuit",
-    "image-url": "",
+    "image": "./static/static_images/dress1.jpg",
     "price": "47.10"
 },
 {
     "id": 2,
     "description": "Aztec Printed Jumpsuit",
-    "image-url": "",
+    "image": "./static/static_images/dress2.jpg",
     "price": "54.20"
 },
 {
     "id": 3,
     "description": "Utility Detail Playsuit",
-    "image-url": "",
+    "image": "./static/static_images/dress3.jpg",
     "price": "31.45"
 },
 {
     "id": 4,
     "description": "Denim Jacket",
-    "image-url": "",
+    "image": "./static/static_images/dress4.jpg",
     "price": "77.87"
 },
 {
     "id": 5,
     "description": "Super Duper dress",
-    "image-url": "",
+    "image": "./static/static_images/dress5.jpg",
     "price": "99.35"
 },
 {
     "id": 6,
     "description": "Crochet Jacket",
-    "image-url": "",
+    "image": "./static/static_images/dress6.jpg",
     "price": "16.56"
 },
 {
     "id": 7,
     "description": "Gigantic Playsuit",
-    "image-url": "",
+    "image": "./static/static_images/dress7.jpg",
     "price": "88.88"
 },
 {
     "id": 8,
     "description": "Famous Dress",
-    "image-url": "",
+    "image": "./static/static_images/dress8.jpg",
     "price": "55.87"
 },
 {
     "id": 9,
     "description": "Green Collar",
-    "image-url": "",
+    "image": "./static/static_images/dress9.jpg",
     "price": "34.88"
 },
 {
     "id": 10,
     "description": "Red Dress",
-    "image-url": "",
+    "image": "./static/static_images/dress10.jpg",
     "price": "22.22"
 },
 {
     "id": 11,
     "description": "Kool Jeans",
-    "image-url": "",
+    "image": "./static/static_images/dress11.jpg",
     "price": "45.45"
 },
 {
     "id": 12,
     "description": "Wide Jeans",
-    "image-url": "",
+    "image": "./static/static_images/dress12.jpg",
     "price": "75.50"
 }
 ]

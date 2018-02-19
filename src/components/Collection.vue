@@ -16,33 +16,24 @@
       
     </div>
     <p class="new-collection">new collection</p>
+    <button class="btn btn-collection">browse collection</button>
     </section>
 
-    <button class="btn btn-collection">browse collection</button>
+    
 
     <section class="dropdown-collection">
       <p>Dropdown items here</p>
     </section>
 
     <section class="cards-collection">
-      <div class="card">
-        <a href="#">
-          <img src="../assets/images/Collection/dress1.jpg" alt="product image" class="card-image">
-        </a>
-        <p class="card-description">Card description</p>
-        <p class="card-price">$55.55</p>
-        <div class="btn btn-card">
-        <icon class="icon" name="shopping-bag"></icon>  
-        <p href="">add to bag</p>
-        </div>
-      </div>
 
-      <div class="card">
+      <div class="card" v-for="product in products" :key="product.id">
         <a href="#">
-          <img src="../assets/images/Collection/dress1.jpg" alt="product image" class="card-image">
+          <!-- <img src="../assets/images/Collection/dress1.jpg" class="" alt="card-image"> -->
+          <img :src="product.image" alt="product image" class="card-image">
         </a>
-        <p class="card-description">Card description</p>
-        <p class="card-price">$55.55</p>
+        <p class="card-description">{{product.description}}</p>
+        <p class="card-price">{{product.price}}</p>
         <div class="btn btn-card">
         <icon class="icon" name="shopping-bag"></icon>  
         <p href="">add to bag</p>
@@ -55,7 +46,29 @@
 </template>
 
 <script>
-export default {};
+import axios from 'axios';
+export default {
+  name: "collection",
+  data: function() {
+    return {
+      products: []
+    };
+  },
+  created: function() {
+    this.getProducts()
+    //console.log(products)
+  },
+  methods: {
+    getProducts: function() {
+      axios
+        .get("/static/products.json")
+        .then(response => {this.products = response.data})
+        .catch(error => {
+          console.log(error);
+        });
+    }
+  }
+};
 </script>
 
 <style>

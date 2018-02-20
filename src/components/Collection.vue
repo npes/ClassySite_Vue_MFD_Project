@@ -13,7 +13,6 @@
       <svg height="20" width="300">
       <line x1="6" y1="0" x2="306" y2="0" style="stroke:#fff;stroke-width:1" />
       </svg>
-      
     </div>
     <p class="new-collection">new collection</p>
     <button class="btn btn-collection">browse collection</button>
@@ -29,7 +28,6 @@
 
       <div class="card" v-for="product in products.slice(0, 12)" :key="product.id">
         <router-link :to="/product/ + product.id">
-          <!-- <img src="../assets/images/Collection/dress1.jpg" class="" alt="card-image"> -->
           <img :src="product.image" alt="product image" class="card-image">
         </router-link>
         <p class="card-description">{{product.description}}</p>

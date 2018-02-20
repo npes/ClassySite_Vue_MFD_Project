@@ -24,18 +24,38 @@
                 <a href="#" class="inline"><icon class="icon" name="globe"></icon> Free Shipping Worldwide</a> 
             </div>
 
-            <div class="btn btn-dropdown">
+            <div class="dropdown">
+                <button class="btn btn-dropdown">Color<icon class="icon" name="chevron-down"></icon></button>  
+                <div class="dropdown-content">
+                    <a href="#">Red</a>
+                    <a href="#">Green</a>
+                    <a href="#">Blue</a>
+                </div>
+            </div>
+            <div class="inline">
+                <div class="dropdown">
+                    <button class="btn btn-dropdown">Select Size<icon class="icon" name="chevron-down"></icon></button>  
+                    
+                    <div class="dropdown-content">
+                        <a href="#">Small</a>
+                        <a href="#">Medium</a>
+                        <a href="#">Large</a>
+                    </div>  
+                </div>
+                <a href="#" class="size-guide inline"><icon class="icon" name="sliders"></icon>Size Guide</a>
+            </div>
+            <!-- <div class="btn btn-dropdown">
                 <p href="#">black</p>
                 <icon class="icon" name="chevron-down"></icon>  
-            </div>
+            </div> -->
 
-            <div class="inline">
+            <!-- <div class="inline">
                 <div class="btn btn-dropdown">
                     <p href="#">Select size</p>
                     <icon class="icon" name="chevron-down"></icon>  
                 </div>
                 <a href="#" class="size-guide inline"><icon class="icon" name="sliders"></icon>Size Guide</a>
-            </div>
+            </div> -->
 
             <div class="btn btn-bag">
                 <icon class="icon" name="shopping-bag"></icon>  

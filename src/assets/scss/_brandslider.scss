@@ -1,0 +1,64 @@
+.brandSlider{
+    grid-area: sB;
+    margin: $sect-margin; 
+    width: 100%;
+    background-color: #f6f6f6; //container bg color
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+  		img{
+			display: block;
+				width: 90%;
+				height: 90%;
+				object-fit: scale-down;
+		}
+    h3{
+      font-size: 1.5em;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 2em 0 0 0;
+      // black line left
+      &:before{
+        border-top: .1rem solid black;
+        content: "";
+        display: inline-block;
+        width: 10%;
+        margin-bottom: 7px;
+        margin-right: 10px;
+      }
+      //black line right
+      &:after{
+        border-top: .1rem solid black;
+        content: "";
+        display: inline-block;
+        width: 10%;
+        margin-bottom: 7px;
+        margin-left: 10px;
+      }
+    }
+    //container for the logos
+    .carrouselContainer{
+      align-self: center;
+      margin: 2em 0 0px 0;
+      width: 100%;
+      .VueCarousel-pagination{
+        margin: 0 0 0 0;
+        .VueCarousel-dot > div{
+          background: rgb(0,0,0)!important;
+          // width: 12px !important;
+          // height: 12px !important;
+          margin: 0 0 2em 0;
+        }
+        .VueCarousel-dot--active{
+          padding: 9px !important;
+           div{
+            background: transparent!important;
+            width: 12px !important;
+            height: 12px !important;
+            border: 1px solid black;
+          }
+        }
+      }
+    }
+  }

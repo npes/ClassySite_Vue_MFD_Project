@@ -35,9 +35,12 @@
                 </div>
         </section>
 <!-- SECTION B START - "TOP BRANDS" -->
-        <div class="homeB-BG"></div>
+        <div class="homeB-BG">
+            
+        </div>
+        <brandslider></brandslider>
         <section class="homeB">
-            <div class="top-brands">
+            <!-- <div class="top-brands">
                 <svg height="22" width="112">
                 <line x1="6" y1="11" x2="106" y2="11" style="stroke:#000;stroke-width:2" />
                 </svg>
@@ -57,7 +60,7 @@
             <div class="slider-controls">
                 <img src="../assets/images/Homepage/SectBSliderDots.png" alt="">
             </div>
-            
+             -->
         </section>
 <!-- SECTION C START - "MUST HAVE FOR HER" -->
         <section class="homeC">
@@ -109,7 +112,6 @@
         </section>
 <!-- SECTION F START - "PRESENTATIONS SLIDER" -->
         <section class="homeF">
-
         </section>
 <!-- SECTION G START - "SOCIAL MEDIA" -->
         <section class="homeG">
@@ -119,8 +121,11 @@
 </template>
 
 <script>
-
+import Brandslider from '@/components/Brandslider.vue'
 export default {
-      
+    name: 'Homepage',
+    components: {
+        'brandslider': Brandslider,
+    }      
 }
 </script>

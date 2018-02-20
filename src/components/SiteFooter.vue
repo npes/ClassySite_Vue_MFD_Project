@@ -1,5 +1,6 @@
 <template>
-        <footer id="bottom">
+    <footer id="bottom">
+        <div></div>
             <div class="ft-column">
                 <h3><a href="#bootom">questions</a></h3>
                 <ul>
@@ -31,7 +32,8 @@
                 <a href="#top"><img src="../assets/images/Header/CLASSY.png" alt="company logo"></a>
                 <p>Ecommerse PSD Theme</p>
             </div>
-        </footer>
+        <div></div>
+    </footer>
 </template>
 
 <script>

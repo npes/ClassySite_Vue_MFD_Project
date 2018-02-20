@@ -14,7 +14,7 @@
 		". csA csA csA csA csA csA csA csA csA csA csA csA ."
 		". csB csB csB csB csB csB csB csB csB csB csB csB ."
 		". csC csC csC csC csC csC csC csC csC csC csC csC .";
-		grid-gap: 0;
+		grid-row-gap: 90px;
 }
 
 
@@ -46,7 +46,7 @@
 	p {
 		color: #fff;
 	}
-	.most-wanted	{
+	.most-wanted {
 		grid-area: a;
 		display: flex;
 		flex-flow: row nowrap;
@@ -54,6 +54,10 @@
 		align-items: flex-end;
 		margin: calc(1.2vw + 1vh + 0.5vmin) 0;
 		font-size: 3.65em;
+		p {
+			font-size: 1em;
+			letter-spacing: 10px;
+		}
 	}
 	.new-collection {
 		grid-area: b;
@@ -88,7 +92,7 @@
 
 .dropdown-collection {
 	grid-area: csA;
-	padding: 4em 0;
+	//padding: 4em 0;
 }
 /* rowstart / columnstart / rowend / columnend*/
 .cards-collection {

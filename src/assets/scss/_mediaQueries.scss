@@ -1,3 +1,5 @@
+@import "variables";
+
 @media screen and (max-width: 1500px) {
 	html {
 		font-size: 80%;
@@ -10,30 +12,125 @@
 	}
 }
 
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 780px) {
 	html {
-		font-size: 100%;
+		font-size: 50%;
 	}
+}
+
+@media screen and (max-width: 650px) {
+	html {
+		font-size: 40%;
+	}
+}
+
+
+@media screen and (max-width: 450px) {
+
+	html {
+		font-size: 40%;	
+	}
+
+	
 	.wrapper {
-		display: grid;
-		//width: auto;
-		//margin: auto;
-		grid-template-columns: repeat(6, 1fr);
-		//grid-template-rows: auto;
-		/* give the grid areas names */
-		grid-template-areas: 
-			". hd hd hd hd ."
-			". sA sA sA sA ."
-			". sB sB sB sB ."
-			". sC sC sC sC ."
-			". sD sD sD sD ."
-			". sE sE sE sE ."
-			". sF sF sF sF ."
-			". sG sG sG sG ."
-			". ft ft ft ft .";
-	}	
-	.sectionA {
-		grid-template-columns: 1fr;	
+			display: grid;
+			width: 100%;
+			margin: 0 auto;
+			grid-template-columns: 1fr 12fr 1fr;
+		
+			/* give the grid areas names */
+			grid-template-areas: 
+				". nv ."
+				". content ."
+				". SoMe ."
+				". ft .";
+			grid-gap: 0px;
+			
+		.homepage {
+			//homepage grid
+			grid-area: 1 / 1 / 2 / 4;
+			display: grid;
+			width: 100%;
+			margin: 0 auto;
+			grid-template-columns: repeat(14, 1fr); 
+			grid-row-gap: 30px;
+		
+			/* give the grid areas names */
+			grid-template-areas: 
+				". hd hd hd hd hd hd hd hd hd hd hd hd ."
+				"sA sA sA sA sA sA sA sA sA sA sA sA sA sA"
+				"sB sB sB sB sB sB sB sB sB sB sB sB sB sB"
+				"sC sC sC sC sC sC sC sC sC sC sC sC sC sC"
+				". sD sD sD sD sD sD sD sD sD sD sD sD ."
+				". sE sE sE sE sE sE sE sE sE sE sE sE ."
+				". sF sF sF sF sF sF sF sF sF sF sF sF .";
+
+			.btn-hero-home {
+				grid-area: hd;
+				justify-self: end;
+				align-self: end;
+				width: 42%;
+				height: 13%;
+				margin-bottom:1.5em;
+				color: #ffffff;
+				background-color: transparent;
+				border: 1px	solid #ffffff;
+				font-size: 1.1em;	
+			}
+
+			.homeA {
+				grid-template-columns: 1fr;
+				grid-template-areas: 
+					"a"
+					"b";
+				h2 {
+					font-size: 1.5em;
+				}
+				h3 {
+					font-size: 1em;
+					width: 90%;
+				}
+			}
+			.lookbook-img1 {
+				grid-area: c;
+				height: 100%;
+				display: none;
+			}
+			.lookbook-img2 {
+				grid-area: b;
+				height: 100%;
+				margin-top: 70px;
+			}
+			.newsletter {
+				grid-area: a;
+				width: 70%;
+			}
+			.newsletter-inner {
+				.icon-container{
+					width: 12%;
+				}
+				input {
+					font-weight: 700;
+					font-size: $f-n;
+					width: 90%;
+					margin-top: 3%;
+					line-height: 2em;		
+				}
+				.btn {
+					margin-top: 1em;
+					height: 5em;
+				}
+			}
+			.homeE {
+				font-size: 2em;
+			}
+		}
+		.SoMe {
+			.get-us-on {
+				p {
+					font-size: 1.2em;
+				}
+			}
+		}
 	}
 }

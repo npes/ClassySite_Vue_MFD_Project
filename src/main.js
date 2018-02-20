@@ -6,8 +6,10 @@ import router from './router'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
 import VeeValidate from 'vee-validate'
+import VueCarousel from 'vue-carousel'
 
 Vue.use(VeeValidate);
+Vue.use(VueCarousel);
 Vue.config.productionTip = false
 
 Vue.component('icon', Icon);

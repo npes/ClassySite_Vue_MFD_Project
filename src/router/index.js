@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-//import HelloWorld from '@/components/HelloWorld'
 import Homepage from '@/components/Homepage'
 import Collection from '@/components/Collection'
 import Product from '@/components/Product'
 import Contact from '@/components/Contact'
+//import Brandslider from '@/components/Brandslider.vue'
 
 Vue.use(Router)
 

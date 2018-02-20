@@ -1,35 +1,33 @@
 /* rowstart / columnstart / rowend / columnend*/
 .homepage {
 	grid-area: 1 / 1 / 2 / 4;
+	//grid-area: content;
 	display: grid;
-	//width: 100rem;
-	//max-width: 1800px;
 	width: 100%;
-	margin: 0 auto;
+	//margin: 0 auto;
 	grid-template-columns: repeat(14, 1fr); 
-	//grid-template-rows: 80vh 585px 270px 778px 670px 430px 430px 275px 250px;
 
     /* give the grid areas names */
     grid-template-areas: 
 		". hd hd hd hd hd hd hd hd hd hd hd hd ."
 		". sA sA sA sA sA sA sA sA sA sA sA sA ."
-		". sB sB sB sB sB sB sB sB sB sB sB sB ."
+		"sB sB sB sB sB sB sB sB sB sB sB sB sB sB"
 		". sC sC sC sC sC sC sC sC sC sC sC sC ."
 		". sD sD sD sD sD sD sD sD sD sD sD sD ."
 		". sE sE sE sE sE sE sE sE sE sE sE sE ."
 		". sF sF sF sF sF sF sF sF sF sF sF sF .";
-		grid-gap: 0;
+		grid-row-gap: 90px;
 }
 /* HERO IMAGE START */
 
 .hero-home {
 	grid-area: 1 / 1 / 2 / 15;
-	align-self: start;
+	//align-self: start;
 	img { 
 	display: block;
     width: 100%;
     height: 100%;
-	object-fit: fill;
+	object-fit: cover;
 	z-index: -1;
 	}  
 }
@@ -40,24 +38,26 @@
 	align-self: end;
 	width: 30%;
 	height: 10%;
-	margin-bottom:7rem;
+	margin-bottom:7em;
 	color: #ffffff;
 	background-color: transparent;
 	border: 2px	solid #ffffff;	
+	z-index: -5;
 }
 
 /* SECTION A START - "LOOKBOOK" */
 .homeA {
-	margin: 5em 0;
+	margin: $sect-margin;
 	grid-area: sA;
 	align-self: center;
 	display: grid;
 	grid-template-columns: 1fr 1.35fr 1fr;	
+	grid-template-areas:
+		"a b c";
 	.lookbook-img1{
-		//border: 1px solid orange;
-		//margin: auto;
+		grid-area: a;
 		width: 100%;
-		height: 100%;
+		height: 95%;
 		background-color: #000;
 		align-self: center;
 		justify-self: end;
@@ -66,13 +66,13 @@
 			display: block;
 			width: 100%;
 			height: 100%;
-			object-fit: fill;
+			object-fit: cover;
 		}
 	}
 	.lookbook-img2{
-		//margin: auto;
+		grid-area: c;
 		width: 100%;
-		height: 100%;
+		height: 95%;
 		background-color: #000;
 		align-self: center;
 		justify-self: start;
@@ -81,12 +81,13 @@
 			display: block;
 			width: 100%;
 			height: 100%;
-			object-fit: fill;
+			object-fit: cover;
 		}
 	}
 	.newsletter {
+		grid-area: b;
 		width: 100%;
-		height: 105%;
+		height: 100%;
 		background-color: $lightergrey;
 		-webkit-box-shadow: 0px 17px 39px 0px rgba(0,0,0,0.2);
 		-moz-box-shadow: 0px 17px 39px 0px rgba(0,0,0,0.2);
@@ -108,7 +109,7 @@
 		align-items: center;
 
 		.icon-container{
-			margin-top: 2%;
+			margin-top: 0.2em;
 			width: 20%;
 			.circle {
 				position: relative;
@@ -145,7 +146,7 @@
 			text-transform: uppercase;
 			font-size: 2.5rem;
 			font-weight: bold;
-			margin-top: 4%;
+			margin-top: 0.5em;
 			text-align: center;
 		}
 
@@ -156,7 +157,7 @@
 			text-align: center;
 			font-weight: 100;
 			color: #9d9d9d;
-			margin-top: 4%;
+			margin-top: 1em;
 		}
 
 		input {
@@ -168,7 +169,7 @@
 			font-weight: 900;
 			font-size: $f-l;
 			width: 90%;
-			margin-top: 5%;
+			margin-top: 1em;
 			line-height: 250%;
 			outline: none;
 			cursor: pointer;		
@@ -183,85 +184,25 @@
 		input:-moz-placeholder { color: #000; opacity: 1; }	
 
 		.btn {
-		margin-top: 9%;
+		margin-top: 2em;
 		width: 90%;
-		height: 20%;
+		height: 4em;
 		color: #000;
 		background-color: transparent;
 		border: 1px	solid #000;
 		font-weight: 900;
 		}
 	}
-
-
 }
 
-/* SECTION B START - "TOP BRANDS" */
-.homeB-BG{
-	grid-area: 3 / 1 / 3 / 15;
-	background-color: $lightgrey;
-}
-.homeB {
-	//margin: 5em 0;
-	grid-area: sB;
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	// grid-template-areas: 
-	// 	"a a a a a"
-	// 	"b b b b b"
-	// 	"c c c c c";
-	grid-template-areas: 
-		"a"
-		"b"
-		"c";
-	.top-brands	{
-		grid-area: a;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: calc(1.2vw + 1vh + 0.5vmin) 0;
-	
-		p {
-			text-transform: uppercase;
-			font-size: 1.4em;
-			font-weight: bold;
-		}
-	}
-	.brand-logos {
-		grid-area: b;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		//margin: 20% 0;
-		div {
-			margin: 0;
-			padding: 0;
-			display: inline-block;
-		}
-		img{
-			display: block;
-				width: 100%;
-				height: 100%;
-				object-fit: scale-down;
-		}
-	}	
-	.slider-controls {
-		grid-area: c;
-		align-self: center;
-		justify-self: center;
-		img{
-			display: block;
-				width: 100%;
-				height: 100%;
-				object-fit: scale-down;
-		}
-	}
-}
+/* SECTION B START - "TOP BRANDS SLIDER" */
+ .homeB-BG{
+ 	grid-area: sB;
+ }
 /* SECTION C START - "MUST HAVE FOR HER" */
 .homeC {
 	grid-area: sC;
-	margin: 5em 0;
+	margin: $sect-margin;
 	display: grid;
 	grid-template-columns: 1.145fr 0.855fr;
 	grid-template-rows: 1fr 1fr;
@@ -313,6 +254,7 @@
 /* SECTION E START - "OFFERS" */
 .homeE-bgImage {
 	grid-area: 6 / 1 / 6 / 15;
+	margin: $sect-margin;
 	img { 
 		display: block;
 		width: 100%;
@@ -324,7 +266,6 @@
 .homeE {
 	grid-area: sE;	
 	//margin: 5em 0;
-	
 	display: grid;
 	//padding: 40px;
 	grid-template-columns: 2fr 1fr 2fr;

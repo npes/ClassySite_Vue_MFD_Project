@@ -1,27 +1,24 @@
-<template>
+<template lang="html">
   <div id="app">
     <div class="wrapper">
-    <header-links></header-links>
+    <navigation></navigation>
     <router-view/>
     <so-me></so-me>
-    <section-footer-bg></section-footer-bg>
-    <section-footer></section-footer>
+    <sitefooter></sitefooter>
     </div>
     </div>
 </template>
 
 <script>
-import HeaderLinks from '@/components/HeaderLinks.vue'
+import Navigation from '@/components/Navigation.vue'
 import SoMe from '@/components/SoMe.vue'
-import SectionFooterbg from '@/components/SectionFooterbg.vue'
-import SectionFooter from '@/components/SectionFooter.vue'
+import SiteFooter from '@/components/SiteFooter.vue'
 export default {
   name: 'App',
   components: {
-    'header-links': HeaderLinks,
+    'navigation': Navigation,
     'so-me': SoMe,
-    'section-footer': SectionFooter,
-    'section-footer-bg': SectionFooterbg,
+    'sitefooter': SiteFooter,
   }
 }
 </script>

@@ -16,20 +16,23 @@
 		". psB psB psB psB psB psB psB psB psB psB psB psB ."
 		". psC psC psC psC psC psC psC psC psC psC psC psC ."
 		". psD psD psD psD psD psD psD psD psD psD psD psD .";
-		grid-gap: 0;
+		grid-row-gap: 4em;
+
+	h2 {
+		font-size: 3em;
+	}
+	
+	h3 {
+		font-size: 2em;
+	}
+	
+	p {
+		font-size: $f-n;
+	}
+
 }
 
-h2 {
-	font-size: 3em;
-}
 
-h3 {
-	font-size: 2em;
-}
-
-p {
-	font-size: $f-n;
-}
 
 
 
@@ -118,21 +121,56 @@ p {
 			height: 3em;
 			box-shadow: 0 0px 0px 0 rgba(0,0,0,0.16), 0 0 0 0px rgba(0,0,0,0.08);
 			p {
-				font-size: $f-s;	
+				font-size: $f-l;	
 			}
 		}
 		.btn:hover {
 				box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
 		}
-		.btn-dropdown {
-			border: 2px solid $darkgrey;
-			justify-content: space-between;
-			padding: 0 10px;
-			height: 2.5em;
-			p {
-				color: #000;
-				text-transform: none;
+		.dropdown {
+			position: relative;
+			display: inline-block;
+			width: 40%;
+		
+			.btn-dropdown {
+				border: 2px solid $darkgrey;
+				background-color: transparent;
+				justify-content: space-between;
+				padding: 0 10px;
+				height: 2.5em;
+				width: 100%;
+				p {
+					color: #000;
+					text-transform: none;
+				}
 			}
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				width: 100%;
+				box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+				z-index: 2;
+			}
+
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+				margin-left: 0;
+			}
+			.dropdown-content a:hover {
+				background-color: #f1f1f1;
+			}
+
+		}
+		.dropdown:hover .dropdown-content {
+			display: inline-block;
+		}
+		
+		.dropdown:hover .btn-dropdown {
+			//background-color: #3e8e41;
 		}
 		.btn-bag {
 			background-color: $lightblue;

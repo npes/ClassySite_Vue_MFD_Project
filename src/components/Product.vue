@@ -69,10 +69,24 @@
         <div class="elegant-detail-top">
             <h3>Extraordinary Design</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nisi eos perspiciatis officia aut alias tempore facilis? Temporibus iusto eius voluptate quis. Quo sunt voluptatibus id culpa quos fugit? Nulla necessitatibus harum, adipisci commodi eius hic voluptate. Ea magni fuga iusto modi, beatae eos sapiente, atque earum architecto nam repellat.</p>
-            <div class="product-style-buttons">
-                Round buttons here
+            <div class="product-style-icons">
+                <div class="product-style-buttons">
+                    <div class="icon-container" :key="item" v-for="item in items">
+                        <div class="circle">
+                            <a href="#"></a>
+                            <div class="icon-box">
+                            <icon class="icon" :name="item" scale="1"></icon>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+                <div class="button-txt">
+                    <p>Elegant Style</p>
+                    <p>Elegant Style</p>
+                    <p>Elegant Style</p>
+                </div>
             </div>
-            <div class="btn product-read-more">
+            <div class="btn btn-product-read-more">
                 <a href="#">read more</a>
             </div>
         </div>
@@ -80,23 +94,35 @@
         <div class="elegant-detail-btm">
             <h3>Extraordinary Design</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nisi eos perspiciatis officia aut alias tempore facilis? Temporibus iusto eius voluptate quis. Quo sunt voluptatibus id culpa quos fugit? Nulla necessitatibus harum, adipisci commodi eius hic voluptate. Ea magni fuga iusto modi, beatae eos sapiente, atque earum architecto nam repellat.</p>
-            <div class="product-style-buttons">
-                Round buttons here
+            <div class="product-style-icons">
+                <div class="product-style-buttons">
+                    <div class="icon-container" :key="item" v-for="item in items">
+                        <div class="circle">
+                            <a href="#"></a>
+                            <div class="icon-box">
+                            <icon class="icon" :name="item" scale="1"></icon>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+                <div class="button-txt">
+                    <p>Elegant Style</p>
+                    <p>Elegant Style</p>
+                    <p>Elegant Style</p>
+                </div>
             </div>
-            <div class="btn product-read-more">
+            <div class="btn btn-product-read-more">
                 <a href="#">read more</a>
             </div>
         </div>
         <img class="elegant-detail-btm-img" src="../assets/images/Product/AdeliaDressCut2.jpg" alt="">
     </section>
     
-    <section class="product-big-discounts">
         <div class="big-discounts-bg">
             <img src="../assets/images/Product/BigDiscountsImg.jpg" alt="">
         </div>
         
-        <button class="btn btn-discounts">browse collection</button>
-    </section>
+        <h2 class="big-discounts">big discounts</h2>
 </div>
   
 </template>
@@ -107,7 +133,8 @@ export default {
     name: "product",
     data: function() {
         return {
-            product: ''
+            product: '',
+            items: ["twitter", "pinterest", "facebook"]
         }
     },
     created: function() {

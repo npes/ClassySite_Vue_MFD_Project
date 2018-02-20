@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Homepage from '@/components/Homepage'
 import Collection from '@/components/Collection'
 import Product from '@/components/Product'
+import Contact from '@/components/Contact'
 
 Vue.use(Router)
 
@@ -21,9 +22,17 @@ export default new Router({
       component: Collection
     },
     {
+      path: '/contact',
+      name: 'Contact',
+      component: Contact
+    },
+    {
       path: '/product/:id',
       name: 'Product',
       component: Product
-    }
-  ]
+    },
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })

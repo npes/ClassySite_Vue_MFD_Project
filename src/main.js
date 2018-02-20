@@ -5,10 +5,12 @@ import App from './App'
 import router from './router'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
+import VeeValidate from 'vee-validate'
 
+Vue.use(VeeValidate);
 Vue.config.productionTip = false
 
-Vue.component('icon', Icon)
+Vue.component('icon', Icon);
 
 /* eslint-disable no-new */
 new Vue({

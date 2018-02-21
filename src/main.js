@@ -7,9 +7,11 @@ import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
 import VeeValidate from 'vee-validate'
 import VueCarousel from 'vue-carousel'
+import Tabs from 'vue-tabs-component'
 
 Vue.use(VeeValidate);
 Vue.use(VueCarousel);
+Vue.use(Tabs);
 Vue.config.productionTip = false
 
 Vue.component('icon', Icon);

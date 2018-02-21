@@ -1,13 +1,7 @@
 <template>
     <div class="SoMe">
         <div class="get-us-on">
-                <svg height="22" width="112">
-                <line x1="6" y1="11" x2="106" y2="11" style="stroke:#000;stroke-width:2" />
-                </svg>
-                <p>get us on</p>
-                <svg height="22" width="112">
-                <line x1="6" y1="11" x2="106" y2="11" style="stroke:#000;stroke-width:2" />
-                </svg>
+                <h3>get us on</h3>
             </div>
         <div class="icons">
             <div class="icon-container" :key="item" v-for="item in items">

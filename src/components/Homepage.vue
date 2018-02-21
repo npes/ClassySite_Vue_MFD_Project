@@ -77,13 +77,72 @@
 <!-- SECTION D START - "PRODUCTS SLIDER" -->
         <section class="homeD">
             
-            <!-- <div class="slick-container">
-                <section class='gallery' id="gallery">
-                    <div v-for="img in images" v-bind:key="img">
-                        <img :src="img">
-                    </div>
-                </section>
-            </div> -->
+<!--
+            <div class="productList">
+                <tabs>
+                    <tab name="new arrivals">
+                        <ul class="productContainer">
+                        <li v-for="product in newProducts" v-bind:key="product.id">
+                            <div class="productItem">
+                            <img class="productImage" v-bind:src="'./static/images/' + product.image" v-bind:alt="product.title">
+                            <h4 class="productTitle">{{product.brand}}{{product.title}}</h4>
+                            <div class="bottomLine">
+                            <span class="productPrice">${{product.price}}</span>
+                            <button type="button" name="addToBag"><img src="../../../static/images/bagGray.png" alt="add to bag">
+                                <span>Add to bag</span>
+                            </button>
+                            </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </tab>
+                </tabs>
+            </div>
+-->
+<div class="productList">
+    <tabs :options="{ useUrlFragment: false }">
+        <tab name="new arrivals">
+            <div class="card" v-for="product in newProducts" :key="product.id">
+                <router-link :to="/product/ + product.id">
+                    <img :src="product.image" v-bind:alt="product.title" class="card-image">
+                </router-link>
+                <p class="card-description">{{product.description}}</p>
+                <p class="card-price">$ {{product.price}}</p>
+                <div class="btn btn-card">
+                <icon class="icon" name="shopping-bag"></icon>  
+                <p href="#">add to bag</p>
+                </div>
+            </div>
+        </tab>
+        <tab name="top sellers">
+            <div class="card" v-for="product in topProducts" :key="product.id">
+                <router-link :to="/product/ + product.id">
+                    <img :src="product.image" v-bind:alt="product.title" class="card-image">
+                </router-link>
+                <p class="card-description">{{product.description}}</p>
+                <p class="card-price">$ {{product.price}}</p>
+                <div class="btn btn-card">
+                <icon class="icon" name="shopping-bag"></icon>  
+                <p href="#">add to bag</p>
+                </div>
+            </div>
+        </tab>
+        <tab name="featured">
+            <div class="card" v-for="product in featuredProducts" :key="product.id">
+                <router-link :to="/product/ + product.id">
+                    <img :src="product.image" v-bind:alt="product.title" class="card-image">
+                </router-link>
+                <p class="card-description">{{product.description}}</p>
+                <p class="card-price">$ {{product.price}}</p>
+                <div class="btn btn-card">
+                <icon class="icon" name="shopping-bag"></icon>  
+                <p href="#">add to bag</p>
+                </div>
+            </div>
+        </tab>
+    </tabs>
+</div>
+
         </section>
 <!-- SECTION E START - "OFFERS" -->
         <div class="homeE-bgImage">
@@ -122,10 +181,52 @@
 
 <script>
 import Brandslider from '@/components/Brandslider.vue'
+import axios from 'axios';
 export default {
     name: 'Homepage',
     components: {
         'brandslider': Brandslider,
-    }      
+    },
+    data: function(){
+    return {
+        newProducts: [],
+        featuredProducts: [],
+        topProducts: []
+        }
+      },
+    created: function() {
+        this.getNewProducts(),
+        this.getFeaturedProducts(),
+        this.getTopProducts()
+    },
+    methods:{
+        getNewProducts: function(){
+        axios.get("/static/products.json")
+            .then(response => {
+            this.newProducts = response.data.filter(product => product.newArrival == true).slice(0, 4);
+            })
+            .catch(error =>{
+            console.log(error);
+            })
+        },
+        getFeaturedProducts: function(){
+        axios.get("/static/products.json")
+            .then(response => {
+            this.featuredProducts = response.data.filter(product => product.featured == true).slice(0, 4);
+            })
+            .catch(error =>{
+            console.log(error);
+            })
+        },
+        getTopProducts: function(){
+        axios.get("/static/products.json")
+            .then(response => {
+            this.topProducts = response.data.filter(product => product.topSeller == true).slice(0, 4);
+            })
+            .catch(error =>{
+            console.log(error);
+            })
+        }
+        }      
 }
 </script>

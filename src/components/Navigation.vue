@@ -33,7 +33,7 @@
 export default {
     methods: {
         openSide: function(){
-        document.getElementById('side-menu').style.width = '150px';
+        document.getElementById('side-menu').style.width = '250px';
         },
         closeSide: function(){
         document.getElementById('side-menu').style.width = '0';

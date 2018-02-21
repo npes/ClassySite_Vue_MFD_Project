@@ -14,15 +14,40 @@
 	.get-us-on	{
 		grid-area: a;
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: 2rem 0 0 0;
+		flex-direction: column;
+		//justify-content: space-around;
+		justify-self: center;
+		align-self: center;
+		//align-items: center;
+		//margin: 2rem 0 0 0;
+		width: 100%;
 	
-		p {
-			text-transform: uppercase;
-			font-size: 1.8em;
+		h3{
+			font-size: 2em;
 			font-weight: bold;
-		}
+			text-transform: uppercase;
+			margin:  0 0 2em 0;
+			display: block;
+			text-align: center;
+			// black line left
+			&:before{
+			  border-top: .1rem solid black;
+			  content: "";
+			  display: inline-block;
+			  width: 30%;
+			  margin-bottom: 0.3em;
+			  margin-right: 20px;
+			}
+			//black line right
+			&:after{
+			  border-top: .1rem solid black;
+			  content: "";
+			  display: inline-block;
+			  width: 30%;
+			  margin-bottom: 0.3em;
+			  margin-left: 20px;
+			}
+		  }
 	}
 
 	a {
@@ -31,11 +56,7 @@
 		border-radius: 100%;
 		z-index: 1;
 	}
-	a:hover{
-		.icon-container {
-			color: #000;
-		}
-	}
+
 .icons {
 	grid-area: b;
 	display: flex;
@@ -48,7 +69,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		//margin-top: 0%;
 		width: 20%;
 		
 		.circle {	

@@ -21,8 +21,8 @@ export default {
     data: function(){
     return{
         items: ["twitter", "pinterest", "facebook", "google-plus", "youtube", "tumblr"],
+        }
     }
-  }
 }
 </script>
 

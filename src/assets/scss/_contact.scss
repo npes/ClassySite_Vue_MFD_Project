@@ -2,12 +2,9 @@
 .contact {
 	grid-area: content;
 	display: grid;
-	//width: 100rem;
-	//max-width: 1800px;
 	width: 100%;
-	margin: 0 auto;
+	//margin: 0 auto;
 	grid-template-columns: repeat(4, 1fr); 
-	//grid-template-rows: 80vh 585px 270px 778px 670px 430px 430px 275px 250px;
 
     /* give the grid areas names */
     grid-template-areas: 
@@ -36,9 +33,10 @@ form {
 
 p {
     margin: 5px 0;
+    font-size: $f-l;
 }
 
-input[type=text], select {
+input[type=text], select, .textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 12px 0;
@@ -46,29 +44,36 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-size: 2rem;
 }
 
-input[type=submit] {
+
+
+.button {
     width: 100%;
-    background-color: #4CAF50;
-    color: white;
     padding: 14px 20px;
     margin: 8px 0;
-    border: none;
     border-radius: 4px;
     cursor: pointer;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	border: 1px solid #ccc;
+	font-size: 2rem;
+	outline: none;
 }
 
-input[type=submit]:hover {
-    background-color: #45a049;
+.button:hover {
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
 }
 
 .submit {
     border-radius: 5px;
-    //background-color: #f2f2f2;
     padding: 20px;
 }
 
 input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+textarea:focus {
     border: 3px solid #555;
 }

@@ -8,7 +8,7 @@
 
 @media screen and (max-width: 1200px) {
 	html {
-		font-size: 68%;
+		font-size: 65%;
 	}
 }
 
@@ -25,7 +25,7 @@
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 750px) {
 
 	html {
 		font-size: 40%;	
@@ -131,8 +131,36 @@
 					height: 5em;
 				}
 			}
-			.homeE {
-				font-size: 2em;
+			.homeE p {
+				font-size: 2rem;
+			}
+
+			.brandSlider h3 {
+				font-size: 2.5em;
+				margin: 2em 0 1em 0;
+			}
+
+			.homeD {
+				.tabs-component-panel{
+					grid-template-columns: repeat(2, 1fr);
+					.card {
+						.btn-card {
+							height: 3em;
+							.icon {height: 60%}
+							p {font-size: 1.2em;}
+						}	
+						.card-price {
+							font-size: 1.5em;
+						}
+						.card-description {
+							font-size: 1.5em;
+						}
+					}
+				}
+				.productList .tabs-component-tabs > li > a {
+					font-size: 1.3em;
+					font-weight: 700;
+				}
 			}
 		}
 		.SoMe {
@@ -196,7 +224,7 @@
 			.headline-collection {
 				grid-template-rows: repeat(3, 1fr);
 				h3 {
-					font-size: .5em;
+					font-size: 2.5rem;
 					&:before{
 						border-top: .1rem solid #fff;
 						content: "";
@@ -221,29 +249,49 @@
 				align-self: top;
 				justify-self: center;
 				text-transform: uppercase;
-				font-size: 3em;
+				font-size: 4rem;
 				font-weight: bold;
 			}
 			.btn-collection {
 				grid-area: c;
-				width: 30%;
-				height: 60%;
-				font-size: 1em;
-			}		
+				width: 33%;
+				height: 68%;
+				font-size: 1.3rem;
+			}
+			.cards-collection {
+					grid-template-columns: repeat(2, 1fr);
+					.card {
+						.btn-card {
+							height: 3em;
+							.icon {height: 60%}
+							p {font-size: 1.2em;}
+						}	
+						.card-price {
+							font-size: 1.5em;
+						}
+						.card-description {
+							font-size: 1.5em;
+						}
+					}
+			}	
+			
 		} 
 /* PRODUCT */
 
-	}
+	//}
 	.product {
-		.product-detail .product-options .dropdown .btn-dropdown {
-			.btn-dropdown {
-				font-size: .2em;
-				
-				.icon {
-					font-size: .3em;
+		.product-detail {
+			grid-template-areas: 
+			"a b c"
+			"d d d"; 
+			.product-options {
+				align-self: initial;
+				.dropdown .btn-dropdown {
+					//font-size: .2em;
+					padding: 0 1px;
 				}
-			}
 		}
+	}
 		.product-sharpen h2 {
 			font-size: 2.5em;
 			text-align: center;
@@ -262,10 +310,28 @@
 			color: #fff;
 			text-transform: uppercase;
 			letter-spacing: 2px;
-			font-size: 1.9em;
+			font-size: 3em;
 			font-weight: 900;
 			width: 50%;
 			height: 18%;
+			padding: 25px;
+		}
+		.tabs-component a {
+			font-size: .8em;
+		}
+		.product-detail .options-tabs .tabs-component-panels {
+			font-size: 1.2em;
 		}
 	}
+/* Contact */
+	.contact {
+		//grid-template-columns: repeat(2, 1fr); 
+		grid-template-areas: 
+		"chd chd chd chd"
+		"csA csA csA csA"
+		"csB csB  csB csB"
+		"csC csC csC csC"
+		"csD csD csD csD";
 	}
+}
+}

@@ -44,18 +44,6 @@
                 </div>
                 <a href="#" class="size-guide inline"><icon class="icon" name="sliders"></icon>Size Guide</a>
             </div>
-            <!-- <div class="btn btn-dropdown">
-                <p href="#">black</p>
-                <icon class="icon" name="chevron-down"></icon>  
-            </div> -->
-
-            <!-- <div class="inline">
-                <div class="btn btn-dropdown">
-                    <p href="#">Select size</p>
-                    <icon class="icon" name="chevron-down"></icon>  
-                </div>
-                <a href="#" class="size-guide inline"><icon class="icon" name="sliders"></icon>Size Guide</a>
-            </div> -->
 
             <div class="btn btn-bag">
                 <icon class="icon" name="shopping-bag"></icon>  
@@ -72,7 +60,17 @@
 
         </div>
         <div class="options-tabs">
-            <p>Options tabs</p>
+            <tabs :options="{ useUrlFragment: false }">
+                <tab name="Description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste commodi modi facere inventore veniam consectetur impedit hic provident exercitationem, voluptates ducimus rerum officiis suscipit sunt iusto minus nam sapiente eius, aut magni? Quod aliquid corporis porro aperiam, nam libero ut aut fugiat, hic modi unde, rem eligendi nihil voluptatibus. Id!
+                </tab>
+                <tab name="Brand">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quidem dignissimos inventore aspernatur voluptatem laudantium aperiam, magni est, atque cupiditate ducimus, cum perspiciatis fugit omnis explicabo corrupti quisquam consequuntur odio numquam? Itaque, sint odit tenetur fuga neque, sequi repellat consequuntur dolorum harum temporibus odio beatae tempore, veniam id aliquam eligendi iste similique est doloremque at quia! Impedit distinctio fugiat necessitatibus.  
+                </tab>
+                <tab name="Info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus soluta reiciendis suscipit animi quisquam adipisci voluptas, eligendi eum vitae at odit ipsam. Nisi doloribus dolorum perferendis quo distinctio laudantium. Optio.
+                </tab>
+            </tabs>
         </div>
     </section>
 
@@ -154,7 +152,7 @@ export default {
     data: function() {
         return {
             product: '',
-            items: ["twitter", "pinterest", "facebook"]
+            items: ["twitter", "pinterest", "facebook"],
         }
     },
     created: function() {
@@ -172,7 +170,7 @@ export default {
                 .get("/static/products.json")
                 .then(response => {this.product = response.data.filter(product => product.id == id)[0]})
                 .catch(error => {console.log(error);}) 
-        }
+        },
     }
 }
 </script>

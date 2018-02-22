@@ -19,6 +19,14 @@ Vue.component('icon', Icon);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  data: {
+    name: '',
+       telefoon: '',
+       email: '',
+       onderwerp: '',
+       testfield: '',
+       vraag: ''
+   },
   router,
   components: { App },
   template: '<App/>',

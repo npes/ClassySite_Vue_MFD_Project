@@ -54,8 +54,29 @@
 	grid-template-columns: 1fr 1.35fr 1fr;	
 	grid-template-areas:
 		"a b c";
+
+	.btn-lookbook {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: snow;
+		border: 2px solid #fff;
+		z-index: 1;
+		padding: 5%;
+		font-size: 2em;
+		line-height: 1.2em;
+		text-transform: lowercase;
+		span {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+	}
+
 	.lookbook-img1{
 		grid-area: a;
+		position: relative;
+		text-align: center;
 		width: 100%;
 		height: 95%;
 		background-color: #000;
@@ -68,9 +89,12 @@
 			height: 100%;
 			object-fit: cover;
 		}
+		
 	}
 	.lookbook-img2{
 		grid-area: c;
+		position: relative;
+		text-align: center;
 		width: 100%;
 		height: 95%;
 		background-color: #000;
@@ -270,7 +294,13 @@
 			.card {
 				//grid-area: 1 / 1 / 2 / 1;
 				display: grid;
-				color: $dark;		
+				color: $dark;	
+				p {
+					font-size: $f-n;	
+				}	
+				.icon {
+					height: 70%;
+				}
 				//grid-template-rows: repeat(3, 1fr);
 				img {
 					grid-area: 1 / 1 / 1 / 1;
@@ -308,12 +338,10 @@
 					//align-items: center;
 					width: 50%;
 					height: 2em;
+					
 					box-shadow: 0 0px 0px 0 rgba(0,0,0,0.16), 0 0 0 0px rgba(0,0,0,0.08);
-					p {
-						font-size: $f-s;	
-					}
-					icon {
-					}
+					
+					
 				}
 				.btn-card:hover {
 						box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
@@ -347,7 +375,9 @@
 	//justify-self: center;
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 4rem;
+	p {
+		font-size: 3.5rem;
+	}
 	.text-left{
 		text-align: right;
 		margin: auto 0;

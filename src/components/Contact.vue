@@ -3,7 +3,8 @@
       <div class="contact-headline">
         <h1>Contact Classy Clothing</h1>
       </div>
-      <form @submit.prevent="validateBeforeSubmit">
+
+    <form @submit.prevent="validateBeforeSubmit">
     <div class="">
         <label class="label">Email</label>
         <p class="control has-icon has-icon-right">
@@ -21,9 +22,16 @@
         </p>
     </div>
 
+    <div class="">
+        <label class="label">Message</label>
+        <p class="control has-icon has-icon-right">
+            <textarea name="message" v-model="message" v-validate="'alpha'" :class="{'textarea': true, 'is-danger': errors.has('message') }" type="textarea" placeholder="Message"></textarea>
+        </p>
+    </div>
+
     <div class="submit">
         <p class="control">
-            <button class="button is-primary" type="submit">Submit</button>
+            <button class="button" type="submit">Submit</button>
         </p>
     </div>
 </form>
@@ -33,17 +41,13 @@
 
 <script>
 export default {
-    name: "contact",
-    data: () => ({
-    email: '',
-    name: '',
-  }),
+  name: 'contact',
   methods: {
     validateBeforeSubmit() {
       this.$validator.validateAll().then((result) => {
         if (result) {
           // eslint-disable-next-line
-          alert('Form Submitted!');
+          //alert('Form Submitted!');
           return;
         }
 

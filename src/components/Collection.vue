@@ -25,7 +25,7 @@
           <img :src="product.image" alt="product image" class="card-image">
         </router-link>
         <p class="card-description">{{product.description}}</p>
-        <p class="card-price">{{product.price}}</p>
+        <p class="card-price">$ {{product.price}}</p>
         <div class="btn btn-card">
         <icon class="icon" name="shopping-bag"></icon>  
         <p href="#">add to bag</p>

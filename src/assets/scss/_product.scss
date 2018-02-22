@@ -76,7 +76,7 @@
 	grid-template-areas: 
 		"a b c"
 		"a b d";
-	margin: 5em 0;
+//	margin: 5em 0;
 	grid-gap: 2em;
 
 	img {
@@ -169,9 +169,6 @@
 			display: inline-block;
 		}
 		
-		.dropdown:hover .btn-dropdown {
-			//background-color: #3e8e41;
-		}
 		.btn-bag {
 			background-color: $lightblue;
 			justify-content: center;
@@ -196,6 +193,71 @@
 	}
 	.options-tabs {
 		grid-area: d;
+		align-content: start;
+
+		.tabs-component {
+			margin: 0 0 4em 0;
+			font-size: $f-l;
+			height: 7em;
+		  }
+		  
+		  .tabs-component-tabs {
+			border: solid 1px #ddd;
+			//border-radius: 16px;
+			margin-bottom: 5px;
+		  }
+		  
+
+			.tabs-component-tabs {
+			  border: 0;
+			  align-items: stretch;
+			  display: flex;
+			  justify-content: flex-start;
+			  margin-bottom: -1px;
+			}
+
+		  
+		  .tabs-component-tab {
+			color: #000;
+			font-size: 14px;
+			font-weight: 600;
+			margin-right: 0;
+
+			padding: 1rem;
+			list-style: none;
+		  }
+		  
+		  .tabs-component-tab:last-child {
+			//border-bottom: dotted 1px #ddd;
+			//border-right: 1px solid $middlegrey;
+		  }
+		  
+		  .tabs-component-panels {
+			  //border: 1px solid $middlegrey;
+			  //width: 70%;
+			  padding: 1rem;
+		  } 
+		  .tabs-component-panel {
+			color: $darkgrey;
+			//width: 70%;
+		} 
+
+		  .tabs-component-tab:hover {
+			color: #666;
+		  }
+		  
+		  .tabs-component-tab.is-active {
+			color: #000;
+			border-left: 1px solid $middlegrey;
+			border-top: 1px solid $middlegrey;
+			border-right: 1px solid $middlegrey;
+		  }
+		  
+		  .tabs-component-tab.is-disabled * {
+			color: #cdcdcd;
+			cursor: not-allowed !important;
+		  }
+
 	}
 }
 
@@ -452,6 +514,8 @@
 	text-transform: uppercase;
 	letter-spacing: 10px;
 	font-size: 3.5em;
+	text-align: center;
+	padding: 15px;
 	font-weight: 900;
 	width: 50%;
 	height: 18%;

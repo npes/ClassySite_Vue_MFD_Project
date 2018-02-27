@@ -19,10 +19,7 @@
                              <div class="icon-box">
                                  <icon class="icon" name="envelope-o" scale="1"></icon>
                              </div>
-                             
-                             <!-- <img src="../assets/images/Homepage/MailIcon.png" alt="Mail icon"> -->
                         </div>
-                        
                     </div>
                    
                     <h2>get our newsletter</h2>

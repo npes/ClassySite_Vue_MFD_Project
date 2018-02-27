@@ -1,12 +1,12 @@
 <template lang="html">
   <div id="app">
     <div class="wrapper">
-    <navigation></navigation>
-    <router-view/>
-    <so-me></so-me>
-    <sitefooter></sitefooter>
+      <navigation></navigation>
+        <router-view/>
+        <so-me></so-me>
+      <sitefooter></sitefooter>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -19,7 +19,7 @@ export default {
     'navigation': Navigation,
     'so-me': SoMe,
     'sitefooter': SiteFooter,
-  }
+  },
 }
 </script>
 

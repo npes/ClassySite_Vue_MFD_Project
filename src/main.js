@@ -20,12 +20,7 @@ Vue.component('icon', Icon);
 new Vue({
   el: '#app',
   data: {
-    name: '',
-       telefoon: '',
-       email: '',
-       onderwerp: '',
-       testfield: '',
-       vraag: ''
+
    },
   router,
   components: { App },

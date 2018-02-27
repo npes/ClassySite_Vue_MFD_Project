@@ -14,7 +14,6 @@ export default new Router({
       path: '/',
       name: 'Homepage',
       component: Homepage,
-      meta: {title: 'Classy Clothing'}
     },
     {
       path: '/collection',

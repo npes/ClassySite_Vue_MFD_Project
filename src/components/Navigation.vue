@@ -2,7 +2,7 @@
     <nav id="top">
         <div class="nav-bg"></div>
         <div class="logo-top">
-            <a href="#header"><img src="../assets/images/Header/CLASSY.png" alt="company logo"></a>
+            <router-link to="/" v-on:click.native="closeSide" ><img src="../assets/images/Header/CLASSY.png" alt="company logo"></router-link>
         </div>
         <div class="buttons-top">
             <div>
@@ -18,7 +18,7 @@
                 <a href="#" v-on:click="openSide"> <icon class="icon" name="bars"> </icon></a>
             </div>
         </div> 
-        <div id="side-menu" class="side-nav">
+        <div id="side-menu" class="side-nav" ref="sidenav">
             <a href="#" class="btn-close" v-on:click="closeSide">&times;</a>
             <!-- native because its a vue component -->
             <router-link to="/" v-on:click.native="closeSide" >Home</router-link>
@@ -33,10 +33,12 @@
 export default {
     methods: {
         openSide: function(){
-        document.getElementById('side-menu').style.width = '250px';
+        // document.getElementById('side-menu').style.width = '250px';
+        this.$refs.sidenav.style.width = '250px';
         },
         closeSide: function(){
-        document.getElementById('side-menu').style.width = '0';
+        // document.getElementById('side-menu').style.width = '0';
+        this.$refs.sidenav.style.width = '0';
         }
     }
 }

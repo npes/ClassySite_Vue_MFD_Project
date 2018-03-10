@@ -9,6 +9,8 @@
   </div>
 </template>
 
+// This is a test
+
 <script>
 import Navigation from '@/components/Navigation.vue'
 import SoMe from '@/components/SoMe.vue'
